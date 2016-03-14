@@ -2,7 +2,7 @@
 title: "CodeBook.md"
 author: "Nicholas Corneau"
 date: "March 13, 2016"
-output: html_document
+output: text file
 ---
 
 # CodeBook.md
