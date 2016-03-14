@@ -7,20 +7,12 @@ Source of the data
 ------------------
 The dataset can be obtained from here [zip.file](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
 
-The R script `run_analysis.R` also downloads it from the source.
-
 Dependencies
 ------------
 The program requires the following packages to be loaded:
 - plyr
 - dplyr
 - data.table
-
-The R script will download these packages if they are not loaded at the start of your session.
-
-Working directory
------------------
-The R script will download the files and create the directory "./data" to store them in.
 
 The Script
 ----------
