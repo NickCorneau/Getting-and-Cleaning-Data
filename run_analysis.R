@@ -8,7 +8,6 @@
 run_analysis <- function() {
   # -0. Load the required data sets-
   # Set working directory to UCI HAR Dataset directory
-  
   if(!file.exists("./data")){dir.create("./data")}
   fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
   download.file(fileUrl,destfile="./data/UCI HAR Dataset/",method="curl")
