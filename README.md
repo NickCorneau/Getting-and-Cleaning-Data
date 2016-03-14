@@ -1,4 +1,4 @@
-Getting-and-cleaning-data
+Getting and Cleaning Data Course Project
 =========================
 
 Description
