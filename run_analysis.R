@@ -7,6 +7,7 @@
 
 # -0. Load the required data sets-
 # Set working directory to UCI HAR Dataset directory
+
 if(!file.exists("./data")){dir.create("./data")}
 fileUrl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 download.file(fileUrl,destfile="./data/UCI HAR Dataset/",method="curl")
@@ -46,23 +47,22 @@ col_with_mean_std <- grep(".*mean.*|.*std.*", names(dataset))
 extractedData <- dataset[,c(col_with_mean_std,562,563)]
 
 # -3. Uses descriptive activity names to name the activities in the data set.-#
-# Lower case the activity names and apply the labels
+# Lower case the activity names and apply the activity labels to the extracted data
 activityLabels[, 2] <- tolower(gsub("_", "", activityLabels[,2]))
 for (i in 1:6){
   extractedData$activity[extractedData$activity == i] <- activityLabels[i,2]
 }
 
 # -4. Appropriately labels the data set with descriptive variable names.-#
-names(dataset)<-gsub("Gyro", "Gyroscope", names(dataset))
-names(dataset)<-gsub("Mag", "Magnitude", names(dataset))
-names(dataset)<-gsub("BodyBody", "Body", names(dataset))
-names(dataset)<-gsub("^t", "Time", names(dataset))
-names(dataset)<-gsub("^f", "Frequency", names(dataset))
-names(dataset)<-gsub("Acc", "Accelerometer", names(dataset))
+names(extractedData)<-gsub("Gyro", "Gyroscope", names(extractedData))
+names(extractedData)<-gsub("Mag", "Magnitude", names(extractedData))
+names(extractedData)<-gsub("^t", "Time", names(extractedData))
+names(extractedData)<-gsub("^f", "Frequency", names(extractedData))
+names(extractedData)<-gsub("Acc", "Accelerometer", names(extractedData))
 
 # -5. From the data set in step 4, creates a second, independent tidy data set with
 #     the average of each variable for each activity and each subject. -#
-tidy_dataset<-aggregate(. ~subject + activity, dataset, mean)
+tidy_dataset<-aggregate(. ~subject + activity, extractedData, mean)
 tidy_dataset<-tidy_dataset[order(tidy_dataset$subject,tidy_dataset$activity),]
-write.table(tidy_dataset, file = "tidydata.txt",row.name=FALSE)
+write.table(tidy_dataset, file = "tidydata.txt",row.name=FALSE,sep=",")
 
