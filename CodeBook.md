@@ -25,8 +25,8 @@ output: html_document
 contains 180 rows (including header) and 81 columns (including enumeration column) in a default csv format
 
 variables:
-*  id	
-*  activity	
+*  activity
+*  subject	
 *  tBodyAcc.std...X_mean	
 *  tBodyAcc.std...Y_mean	
 *  tBodyAcc.std...Z_mean	
