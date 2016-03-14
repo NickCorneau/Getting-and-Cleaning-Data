@@ -1,11 +1,9 @@
 Getting-and-cleaning-data
 =========================
 
-This README contains information about the `run_analyis.R` program.
-
 Source of the data
 ------------------
-The dataset can be obtained from here [zip.file](https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip) 
+The dataset can be obtained from here https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
 Dependencies
 ------------
