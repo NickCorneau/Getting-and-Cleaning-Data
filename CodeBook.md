@@ -22,7 +22,7 @@ output: html_document
 * saves the tidy dataset into tidy_dataset.csv
 
 # tidydata.csv
-contains 180 rows (including header) and 479 columns (including enumeration column) in a default csv format
+contains 180 rows (including header) and 81 columns (including enumeration column) in a default csv format
 
 variables:
 *  id	
