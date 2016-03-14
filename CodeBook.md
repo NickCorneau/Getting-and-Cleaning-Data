@@ -25,6 +25,7 @@ output: html_document
 contains 180 rows (including header) and 81 columns (including enumeration column) in a default csv format
 
 variables:
+
  [1] "subject"                                               
  [2] "activity"                                              
  [3] "TimeBodyAccelerometer-mean()-X"                        
